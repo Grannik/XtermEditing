@@ -1,0 +1,16 @@
+XTerm*geometry: 103x46+0+17
+
+xterm*faceName: Andale:style=Mono:size=10
+
+ xterm*scrollBar:     true
+!xterm*scrollBar:     false
+ xterm*rightScrollBar:true
+!xterm*rightScrollBar:false
+
+xterm*background: black
+xterm*foreground: white
+xterm*cursorColor:green
+
+xterm*translations: #override \
+        Ctrl Shift <KeyPress> C: copy-selection(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+        Ctrl Shift <KeyPress> V: insert-selection(PRIMARY, CLIPBOARD, CUT_BUFFER0)

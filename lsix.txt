@@ -1,0 +1,38 @@
+Установка lsix
+
+ImageMagick можно установить с помощью команды:
+sudo pacman -S imagemagick
+
+В Debian, Ubuntu, Linux Mint:
+sudo apt-get install imagemagick
+
+
+Загрузите последнюю версию lsix со страницы проекта на github с помощью команды:
+wget https://github.com/hackerb9/lsix/archive/master.zip
+
+Распакуйте скачанный архив:
+unzip master.zip
+
+Эта команда извлечет все содержимое в папку с именем «lsix-master».
+Скопируйте двоичный файл lsix из этого каталога в ваш каталог $PATH, например /usr/local/bin/.
+sudo cp lsix-master/lsix /usr/local/bin/
+
+Наконец, сделайте двоичный файл lsbix исполняемым:
+sudo chmod +x /usr/local/bin/lsix
+
+Перед началом использования lsix убедитесь, что ваш терминал поддерживает графику Sixel.
+Вы можете запустить Xterm с включенным режимом Sixel, используя команду (из другого терминала):
+xterm -ti vt340
+
+Кроме того, вы можете сделать vt340 типом терминала по умолчанию для Xterm.
+Отредактируйте файл .Xresources Добавьте следующую строку:
+xterm*decTerminalID : vt340
+
+Показать миниатюру:
+lsix logo.png
+
+Показать все миниатюры:
+lsix
+
+Показать все миниатюры по расширению файла:
+lsix *.png
